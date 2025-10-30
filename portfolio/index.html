@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal developer portfolio" />
+    <title>Portfolio • Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#home">PF</a>
+      <nav class="nav" id="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <p class="badge">Available for work</p>
+            <h1>Hi, I’m <span class="highlight">Kasa.Tejaswini</span>.</h1>
+            <p class="subtitle">Iam a Fullstack Developer</p>
+            <div class="cta">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn" href="#contact">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img src="linkedin_photo.jpg" alt="Portrait placeholder" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            Iam a sophomore at Rajiv Gandhi University of knowledge and technologies.Hardwork and determination are the key aspects in defining who iam.I started my journey of learning technical skills by joining in Academor.My goal is to learn more tech skills and get hired in an organization where I can put all my skills and prove and use it.In love with the coding challenges and hands-on projects and ready to take on new challenges in the tech world
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects__grid">
+            <article class="card reveal">
+              <img src="expenseTracker.jpg" alt="Project 1" />
+              <div class="card__body">
+                <h3>Expense Tracker</h3>
+                <p>The Expense Tracker is a web/mobile application designed to help users manage their personal finances efficiently by tracking income and expenses. Users can add, edit, and delete transactions, categorize spending, and view real-time summaries and visual insights through charts and reports.</p>
+                <div class="tags">
+                  <span>MERN</span>
+                </div>
+                <div class="links">
+                  <a href="#" target="_blank" rel="noreferrer">Live</a>
+                  <a href="#" target="_blank" rel="noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal">
+              <img src="Ecommerce Nxtify.jpg" alt="Project 2" />
+              <div class="card__body">
+                <h3>Ecommerce Web application</h3>
+                <p>Developed a full-stack e-commerce web application using Next.js for the frontend and Node.js with Express.js for the backend. The project allows users to browse products, add them to the cart, and manage quantities dynamically, offering a seamless and responsive shopping experience.</p>
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                </div>
+                <div class="links">
+                  <a href="#" target="_blank" rel="noreferrer">Live</a>
+                  <a href="#" target="_blank" rel="noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal">
+              <img src="https://picsum.photos/seed/p3/800/500" alt="Project 3" />
+              <div class="card__body">
+                <h3>UI Component Library</h3>
+                <p>Set of accessible components with tokens and theming support.</p>
+                <div class="tags">
+                  <span>Design Systems</span><span>ARIA</span><span>Tokens</span>
+                </div>
+                <div class="links">
+                  <a href="#" target="_blank" rel="noreferrer">Live</a>
+                  <a href="#" target="_blank" rel="noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills</h2>
+          <ul class="skills__list">
+            <li>JavaScript (ES2023)</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>TypeScript</li>
+            <li>HTML & CSS</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <form id="contact-form" class="contact__form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="your@email.com" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+            <p id="form-status" role="status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
